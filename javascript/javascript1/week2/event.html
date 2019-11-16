@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="event.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+function getEventWeekDay(date){
+    let weekDays = ["Monady","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    let day =  date.getDate();
+    return weekdays[day];  
+}
+ var date = new Date();
+ var weekDay = getEventWeekDay(date);
+
+ var eventDate = new Date("December 15 , 2019");
+ var eventDay = getEventWeekDay(eventDate);
+ var calculation = Math.round((eventDate - date)/(1000*60*60*24));
+
+ console.log(`Today is ${weekDay} , event is in ${calculation} days.`);
